@@ -2,7 +2,7 @@ Package: oscarr
 Title: R interface to pyoscar
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Ousmane", "Ouedraogo", , "oousmane@", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: provides access to the WMO OSCAR HTTP API..
 License: MIT + file LICENSE
