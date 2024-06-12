@@ -12,6 +12,7 @@ provides access to the WMO OSCAR HTTP API..
 Useful links:
 \itemize{
   \item \url{https://github.com/oousmane/oscarr}
+  \item \url{https://oousmane.github.io/oscarr/}
   \item Report bugs at \url{https://github.com/oousmane/oscarr/issues}
 }
 
