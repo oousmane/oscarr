@@ -16,5 +16,5 @@ Imports:
     tibble,
     janitor,
     dplyr
-URL: https://github.com/oousmane/oscarr
+URL: https://github.com/oousmane/oscarr, https://oousmane.github.io/oscarr/
 BugReports: https://github.com/oousmane/oscarr/issues

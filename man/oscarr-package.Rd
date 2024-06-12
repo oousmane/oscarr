@@ -8,6 +8,14 @@
 \description{
 provides access to the WMO OSCAR HTTP API..
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/oousmane/oscarr}
+  \item Report bugs at \url{https://github.com/oousmane/oscarr/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
 

@@ -13,7 +13,8 @@
 #' @return A tibble of metadata of all matching stations
 #' @export
 #'
-#' @example
+#' @examples
+#'
 #' library(oscarr)
 #' country <- "NGA" # Nigeria ISO 3166-1 alpha-3 code
 #' nga_stns <- get_stations(country = country)

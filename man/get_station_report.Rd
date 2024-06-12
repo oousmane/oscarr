@@ -2,20 +2,23 @@
 % Please edit documentation in R/get_station_report.R
 \name{get_station_report}
 \alias{get_station_report}
-\title{Get OSCAR station report summary by providing it's identifier}
+\title{Retrieve WMO OSCAR station report summary}
 \usage{
 get_station_report(identifier = "0-20000-0-71758")
 }
 \arguments{
-\item{identifier}{}
+\item{identifier}{WIGOS station identifier}
 }
 \value{
-a \link[tibble:tibble-package]{tibble}. Summary report of the station with identifier
+a \link[tibble:tibble-package]{tibble}. Summary report of the station in a tibble \code{data.frame}
 }
 \description{
-Get OSCAR station report summary by providing it's identifier
+Retrieve WMO OSCAR station report summary
 }
 \examples{
 library(oscarr)
-get_station_report(identifier = "0-20000-0-71758")
+wigos_baraboule <- "0-854-0-109"
+get_station_report(identifier = wigos_baraboule)
+
+
 }

@@ -2,16 +2,35 @@
 % Please edit documentation in R/get_stations.R
 \name{get_stations}
 \alias{get_stations}
-\title{Title}
+\title{Retrieve WMO OSCAR station metadata}
 \usage{
-get_stations(country = "BFA")
+get_stations(
+  program = NULL,
+  country = "BFA",
+  station_type = NULL,
+  wigos_id = NULL
+)
 }
 \arguments{
-\item{country}{Official ISO 3C of country name}
+\item{program}{WMO OSCAR program/network. Example : "GBON","RBCN", etc.}
+
+\item{country}{Official ISO 3166-1 alpha-3 code (3 letters)}
+
+\item{station_type}{WMO OSCAR station type. Example : "landFixed","airMobile" etc. Use \code{oscarr::oscar_station_type()} for a complete list.}
+
+\item{identifier}{WIGOS Station identifier. Example : "0-854-0-109".}
 }
 \value{
-A tibble. OSCAR Station list of the specified country
+A tibble of metadata of all matching stations
 }
 \description{
-Title
+Retrieve WMO OSCAR station metadata
+}
+\examples{
+
+library(oscarr)
+country <- "NGA" # Nigeria ISO 3166-1 alpha-3 code
+nga_stns <- get_stations(country = country)
+View(nga_stns)
+
 }
