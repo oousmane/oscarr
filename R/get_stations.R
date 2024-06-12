@@ -1,14 +1,18 @@
 
 
-#' Retrieve WMO OSCAR station list for a country
+#' Retrieve WMO OSCAR station metadata
 #'
-#' @param country Official ISO 3166-1 alpha-3 code (3 letters)
 #' @importFrom purrr map_dfr
 #' @importFrom purrr pluck
 #' @importFrom reticulate py_to_r
 #' @importFrom dplyr mutate
-#' @return A tibble. OSCAR Station list of the specified country
+#' @param program WMO OSCAR program/network. Example : "GBON","RBCN", etc.
+#' @param country Official ISO 3166-1 alpha-3 code (3 letters)
+#' @param station_type WMO OSCAR station type. Example : "landFixed","airMobile" etc. Use \code{oscarr::oscar_station_type()} for a complete list.
+#' @param identifier WIGOS Station identifier. Example : "0-854-0-109".
+#' @return A tibble of metadata of all matching stations
 #' @export
+#'
 #' @example
 #' library(oscarr)
 #' country <- "NGA" # Nigeria ISO 3166-1 alpha-3 code
