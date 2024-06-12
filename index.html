@@ -57,43 +57,8 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="oscarr">oscarr<a class="anchor" aria-label="anchor" href="#oscarr"></a>
-</h1></div>
-<!-- badges: start -->
-<!-- badges: end -->
-<p>The goal of <code>oscarr</code> is to provide an R wrapper to <code>pyoscar</code> python module that provide an easy access to WMO OSCAR REST API. In other words, the package <code>oscarr</code> brings pyoscar to R Community.</p>
-<div class="section level2">
-<h2 id="setting-up-and-installation">Setting up and Installation<a class="anchor" aria-label="anchor" href="#setting-up-and-installation"></a>
-</h2>
-<p>You can install the development version of oscarr from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<p><code>{r install-oscarr} # install.packages("devtools") devtools::install_github("oousmane/oscarr")</code></p>
-<p>```{r setup} # environment path (replace if you needed) my_env &lt;- “~/.virtualenvs/pkg-oscarr/” # on Win system can be “C:/.virtualenvs/pkg-oscarr/”</p>
-</div>
-</div>
-<div class="section level1">
-<h1 id="run-this-works-on-macos">run this (works on macOS)<a class="anchor" aria-label="anchor" href="#run-this-works-on-macos"></a>
-</h1>
-<p>args &lt;- paste(“-m venv”, my_env) system2(“python3”, args) # create environment reticulate::use_virtualenv(my_env) # force reticulate to use my_env # install pyoscar in environment oscarr::install_pyoscar(my_env)</p>
-<pre><code>
-## Example
-
-This is a basic example which shows you how use oscarr :
-
-```{r example}
-library(oscarr)
-## retrieve all oscar station within  a country
-get_stations(country = "NGA") # Retrieve WMO OSCAR Station within Nigeria
-
-## station report summary by using WIGOS identifier
-wigos_baraboule &lt;- "0-854-0-109"
-get_station_report(identifier = wigos_baraboule)
-
-## Add further constrains to station query
-
-get_stations(program = "GBON",country = "BFA", station_type = "landFixed")</code></pre>
-</div>
-
+  <main id="main" class="col-md-9">
+provides access to the WMO OSCAR HTTP API..
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
