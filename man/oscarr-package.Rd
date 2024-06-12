@@ -12,13 +12,12 @@ provides access to the WMO OSCAR HTTP API..
 Useful links:
 \itemize{
   \item \url{https://github.com/oousmane/oscarr}
-  \item \url{https://oousmane.github.io/oscarr/}
   \item Report bugs at \url{https://github.com/oousmane/oscarr/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Ousmane Ouedraogo \email{oousmane@proton.me} (\href{https://orcid.org/0000-0002-6349-4146}{ORCID})
 
 }
 \keyword{internal}

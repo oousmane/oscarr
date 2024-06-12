@@ -2,8 +2,8 @@ Package: oscarr
 Title: R interface to pyoscar
 Version: 0.0.0.9000
 Authors@R: 
-    person("Ousmane", "Ouedraogo", , "oousmane@", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Ousmane", "Ouedraogo", , "oousmane@proton.me", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6349-4146"))
 Description: provides access to the WMO OSCAR HTTP API..
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -16,5 +16,5 @@ Imports:
     tibble,
     janitor,
     dplyr
-URL: https://github.com/oousmane/oscarr, https://oousmane.github.io/oscarr/
+URL: https://github.com/oousmane/oscarr
 BugReports: https://github.com/oousmane/oscarr/issues
