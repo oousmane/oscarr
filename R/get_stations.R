@@ -14,11 +14,13 @@
 #' @export
 #'
 #' @examples
-#'
+#' \dontrun{
 #' library(oscarr)
 #' country <- "NGA" # Nigeria ISO 3166-1 alpha-3 code
 #' nga_stns <- get_stations(country = country)
 #' View(nga_stns)
+#'}
+#'
 #'
 get_stations <- function(program = NULL, country ="BFA",station_type = NULL, wigos_id=NULL ){
     c <- pyoscar$OSCARClient()

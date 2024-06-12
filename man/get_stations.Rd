@@ -27,10 +27,12 @@ A tibble of metadata of all matching stations
 Retrieve WMO OSCAR station metadata
 }
 \examples{
-
+\dontrun{
 library(oscarr)
 country <- "NGA" # Nigeria ISO 3166-1 alpha-3 code
 nga_stns <- get_stations(country = country)
 View(nga_stns)
+}
+
 
 }

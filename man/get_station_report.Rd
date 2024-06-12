@@ -16,9 +16,11 @@ a \link[tibble:tibble-package]{tibble}. Summary report of the station in a tibbl
 Retrieve WMO OSCAR station report summary
 }
 \examples{
+\dontrun{
 library(oscarr)
 wigos_baraboule <- "0-854-0-109"
 get_station_report(identifier = wigos_baraboule)
+}
 
 
 }
