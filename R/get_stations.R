@@ -19,10 +19,15 @@
 #' nga_stns <- get_stations(country = country)
 #' View(nga_stns)
 #'
-get_stations <- function(country="BFA"){
-  c=pyoscar$OSCARClient()
-  res <- c$get_stations(country=country)
-  res$stationSearchResults %>%
+get_stations <- function(program = NULL, country ="BFA",station_type = NULL, wigos_id=NULL ){
+    c <- pyoscar$OSCARClient()
+    res <- c$get_stations(
+      program = program,
+      country = country,
+      station_type = station_type,
+      wigos_id = wigos_id
+    )
+    res$stationSearchResults %>%
     reticulate::py_to_r() %>%
     purrr::map_dfr(purrr::pluck) %>%
     dplyr::mutate(
@@ -30,5 +35,5 @@ get_stations <- function(country="BFA"){
       latitude = as.numeric(latitude),
       elevation = as.numeric(elevation)
     )
-}
+  }
 
