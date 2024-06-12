@@ -1,19 +1,16 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # oscarr
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of `oscarr` is to provide an R wrapper to `pyoscar` python
-module that provide an easy access to WMO OSCAR REST API. In other
-words, the package `oscarr` brings pyoscar to R Community.
+The goal of `oscarr` is to provide an R wrapper to [pyoscar](https://github.com/wmo-cop/pyoscar "https://github.com/wmo-cop/pyoscar") python module that provide an easy access to WMO OSCAR REST API. In other words, the package `oscarr` brings [pyoscar](https://github.com/wmo-cop/pyoscar "https://github.com/wmo-cop/pyoscar") to R Community.
 
-## Installation
+# Installation
 
-You can install the development version of oscarr from
-[GitHub](https://github.com/) with:
+You can install the development version of oscarr from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -33,7 +30,7 @@ reticulate::use_virtualenv(my_env) # force reticulate to use my_env
 oscarr::install_pyoscar(my_env)
 ```
 
-## Example
+# Example
 
 This is a basic example which shows you how to use `oscarr`:
 
