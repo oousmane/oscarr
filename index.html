@@ -57,8 +57,48 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9">
-provides access to the WMO OSCAR HTTP API..
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="oscarr">oscarr<a class="anchor" aria-label="anchor" href="#oscarr"></a>
+</h1></div>
+<!-- badges: start -->
+<!-- badges: end -->
+<p>The goal of <code>oscarr</code> is to provide an R wrapper to <code>pyoscar</code> python module that provide an easy access to WMO OSCAR REST API. In other words, the package <code>oscarr</code> brings pyoscar to R Community.</p>
+<div class="section level2">
+<h2 id="setting-up-and-installation">Setting up and Installation<a class="anchor" aria-label="anchor" href="#setting-up-and-installation"></a>
+</h2>
+<p>You can install the development version of oscarr from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"oousmane/oscarr"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># environment path (replace if you needed)</span></span>
+<span><span class="va">my_env</span> <span class="op">&lt;-</span> <span class="st">"~/.virtualenvs/pkg-oscarr/"</span> <span class="co"># on Win system can be "C:/.virtualenvs/pkg-oscarr/"</span></span>
+<span></span>
+<span><span class="co"># run this (works on macOS)</span></span>
+<span><span class="va">args</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"-m venv"</span>, <span class="va">my_env</span><span class="op">)</span> </span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/system2.html" class="external-link">system2</a></span><span class="op">(</span><span class="st">"python3"</span>, <span class="va">args</span><span class="op">)</span> <span class="co"># create environment</span></span>
+<span><span class="fu">reticulate</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/reticulate/reference/use_python.html" class="external-link">use_virtualenv</a></span><span class="op">(</span><span class="va">my_env</span><span class="op">)</span> <span class="co"># force reticulate to use my_env</span></span>
+<span><span class="co"># install pyoscar in environment</span></span>
+<span><span class="fu">oscarr</span><span class="fu">::</span><span class="fu"><a href="reference/dependencies.html">install_pyoscar</a></span><span class="op">(</span><span class="va">my_env</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
+<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<p>This is a basic example which shows you how use oscarr :</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/oousmane/oscarr" class="external-link">oscarr</a></span><span class="op">)</span></span>
+<span><span class="co">## retrieve all oscar station within  a country</span></span>
+<span><span class="fu"><a href="reference/get_stations.html">get_stations</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">"NGA"</span><span class="op">)</span> <span class="co"># Retrieve WMO OSCAR Station within Nigeria</span></span>
+<span></span>
+<span><span class="co">## station report summary by using WIGOS identifier</span></span>
+<span><span class="va">wigos_baraboule</span> <span class="op">&lt;-</span> <span class="st">"0-854-0-109"</span></span>
+<span><span class="fu"><a href="reference/get_station_report.html">get_station_report</a></span><span class="op">(</span>identifier <span class="op">=</span> <span class="va">wigos_baraboule</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">## Add further constrains to station query</span></span>
+<span></span>
+<span><span class="fu"><a href="reference/get_stations.html">get_stations</a></span><span class="op">(</span>program <span class="op">=</span> <span class="st">"GBON"</span>,country <span class="op">=</span> <span class="st">"BFA"</span>, station_type <span class="op">=</span> <span class="st">"landFixed"</span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
